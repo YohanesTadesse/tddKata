@@ -6,5 +6,6 @@ Resources/problem descriptions
 
 coding kata
 http://codekata.com/
+
 Refactoring kata:
 https://github.com/emilybache/SupermarketReceipt-Refactoring-Kata
