@@ -11,7 +11,7 @@ public class KataEightConflictingObjectives {
     public static List<String> getComposedWord(final String string) {
         final List<String> sixLetterWords = new ArrayList<String>();
         final String fileName = "resources/word.txt";
-        String line = null;
+        String line;
         FileReader fileReader = null;
         try {
             fileReader = new FileReader(new File(fileName));

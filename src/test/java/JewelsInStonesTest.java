@@ -10,8 +10,8 @@ import static org.junit.Assert.*;
 /**
  * Created by tadessey on 3/30/18.
  */
-public class SolutionTest {
-    Solution s = new Solution();
+public class JewelsInStonesTest {
+    JewelsInStones s = new JewelsInStones();
 
     @Test
     public void name() throws Exception {

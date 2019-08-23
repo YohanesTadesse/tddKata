@@ -5,6 +5,8 @@ import java.util.Stack;
 
 /**
  * Created by tadessey on 3/7/18.
+ *  * problem description
+ *  * https://www.hackerrank.com/challenges/ctci-queue-using-two-stacks/problem
  */
 public class Solution {
     final static Stack<Integer> stackOne = new Stack<>();

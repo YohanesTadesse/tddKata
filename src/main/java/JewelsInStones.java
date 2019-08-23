@@ -3,8 +3,9 @@ import java.util.stream.Collectors;
 
 /**
  * Created by tadessey on 3/30/18.
+ *
  */
-public class Solution {
+public class JewelsInStones {
 
     public int numJewelsInStones(final String j, final String s) {
         System.out.println("aAABBba".replaceAll("[^Aa]", ""));

@@ -1,4 +1,5 @@
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Random;
@@ -6,7 +7,14 @@ import java.util.Random;
 /**
  * Created by tadessey on 5/26/17.
  */
-public class StringAddition {
+public class StringAdditionTest {
+
+    private StringAddition stringAddition;
+
+    @Before
+    public void setUp() throws Exception {
+        stringAddition = new StringAddition();
+    }
 
     @Test
     public void givenNullStringReturnNull() {
@@ -37,22 +45,13 @@ public class StringAddition {
     public void givenTwoRandomElementsReturnSum() {
         final int a = (int)Math.floor(Math.random()*10) + 1;
         final int b = (int)Math.floor(Math.random()*10) + 1;
-        final String string = Integer.toString(a) + "+" + Integer.toString(b);
+        final String string = a + "+" + b;
         final String string2 = Integer.toString(a+b);
         compare(string2, string);
     }
 
     public String stringCalculatorAdd(String numbers) {
-        if (numbers == null || numbers.length() < 2) return numbers;
-
-        final String[] splitted = split(numbers);
-        final int a = Integer.parseInt(splitted[0]);
-        final int b = Integer.parseInt(splitted[1]);
-        return Integer.toString(a+b);
-
+        return stringAddition.calculateStrings(numbers);
     }
 
-    String[] split(String number) {
-        return number.split("\\+");
-    }
 }

@@ -13,18 +13,20 @@ public class PriorityNode {
     CustomPriorityQueue customPriorityQueue = new CustomPriorityQueue();
 
     @Test
-
     public void shouldReturnNullToEmptyQueue() throws Exception {
         Node node = new Node();
+
         Assert.assertEquals(null, node.head);
     }
+
     @Test
     public void shouldReturnTheFirstElementWhileHadOnlyOne(){
         Node node =new Node();
         node.element = 1;
-        customPriorityQueue.enQueue(node);
-        Assert.assertEquals(1,  customPriorityQueue.getElements());
 
+        customPriorityQueue.enQueue(node);
+
+        Assert.assertEquals(1,  customPriorityQueue.getElements());
     }
 
     @Test
@@ -32,26 +34,23 @@ public class PriorityNode {
     public void shouldReturnAllElements() throws Exception {
         List<Node> nodeList = new ArrayList<Node>();
         Random random = new Random();
+
         for(int i = 0; i < 5; i++) {
             Node node = new Node();
             node.element = random.nextInt();
             nodeList.add(node);
         }
+
         for(Node node: nodeList){
             customPriorityQueue.enQueue(node);
         }
+
         Assert.assertEquals(nodeList.size(), customPriorityQueue.size());
     }
 
-    @Before
-    public void setUp() throws Exception {
-
-    }
-
     @Test
-
     public void shouldReturnZeroForEmptyQueue() throws Exception {
-        Node node = new Node();
+
         Assert.assertEquals(0, customPriorityQueue.size());
     }
 
