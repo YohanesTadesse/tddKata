@@ -4,7 +4,7 @@ package FizzBuzzBazz;
  * Created by tadessey on 3/2/18.
  */
 public class FizzBuzzBazzReturnObject {
-    String str = "";
+    String str;
     int num;
 
     public FizzBuzzBazzReturnObject(final String str, final int num) {

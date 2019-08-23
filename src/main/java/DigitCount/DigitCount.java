@@ -12,12 +12,14 @@ public class DigitCount {
         int sum = k;
         int counter = 0;
         int power = 1;
+
         do {
             counter++;
             sum = sum + (int) Math.pow(10, power);
             power++;
         }
         while (sum < n);
+
         sum = k;
         power = 1;
         while (sum < n) {
@@ -29,12 +31,15 @@ public class DigitCount {
                 counter += n - sum >= 10 ? 8 : (n - sum) - 1;
             }
         }
+
         return counter;
     }
 
     public int digitCountsLoop(final int k, final int n) {
+
         if (n < k) return 0;
         int count = 1;
+
         for (int i = 10; i <= n; i++) {
             int num = i;
             while (num != 0 ) {
@@ -44,6 +49,7 @@ public class DigitCount {
                 num /= 10;
             }
         }
+
         return count;
     }
 }

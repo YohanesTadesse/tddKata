@@ -9,7 +9,7 @@ public class DigitCountTest {
     private DigitCount count;
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
          count = new DigitCount();
     }
 

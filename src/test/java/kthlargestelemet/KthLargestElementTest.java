@@ -3,27 +3,32 @@ package kthlargestelemet;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
 
 public class KthLargestElementTest {
-    KthLargestElement  k;
+    private KthLargestElement kthLargestElement;
 
     @Before
-    public void setUp() throws Exception {
-        k = new KthLargestElement();
+    public void setUp() {
+        kthLargestElement = new KthLargestElement();
     }
 
     @Test
-    public void name() {
-        int [] arr = new int[] {9,3,2,4,8};
-        System.out.println(k.kthLargestElement(3, arr));
+    public void shouldReturn3rdLargestElement() {
+        int [] arr = new int[] {9, 3, 2, 4, 8};
+
+        final int actual = kthLargestElement.kthLargestElement(3, arr);
+
+        assertThat(actual, is(4));
     }
 
     @Test
-    public void interleave() {
-        final String s1 = "abbcddef";
-        final String s2 = "accbbbcd";
-        final String s3 = "abbcddefaccbbbdc";
-        assertFalse(k.isInterleave2(s1, s2, s3));
+    public void shouldReturn10thLargestElement() {
+        int [] arr = new int[] {9, 3, 2, 4, 8, 1, 6, 5, 7, 19};
+
+        final int actual = kthLargestElement.kthLargestElement(10, arr);
+
+        assertThat(actual, is(1));
     }
 }
